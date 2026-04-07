@@ -35,5 +35,5 @@ jobs:
             echo "${{ secrets.ALIBABA_PASSWORD }}" | docker login crpi-xga1c7tdwvfzydbb.cn-hangzhou.personal.cr.aliyuncs.com -u "${{ secrets.ALIBABA_USERNAME }}" --password-stdin
 
             # 只拉取和启动前端
-            docker compose pull frontend
-            docker compose up -d frontend
+            docker compose pull frontend-admin
+            docker compose up -d frontend-admin
