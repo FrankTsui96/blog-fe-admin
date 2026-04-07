@@ -12,6 +12,8 @@ import { Input } from '@/components/ui/input';
 import { InputGroup, InputGroupInput, InputGroupAddon } from '@/components/ui/input-group';
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
 import { toast } from 'sonner';
+import { getSafeLocalStorage } from '@/utils';
+import { StorageKeyRedirectRouter } from '@/constants';
 
 const formSchema = z.object({
   email: z.string().min(1, '邮箱不能为空'),
@@ -36,10 +38,9 @@ export default function Login() {
     try {
       const res = await authApi.login(data);
       if (res.code === 200) {
-        console.log(res);
         localStorage.setItem('token', res.data.accessToken);
         toast.success('登录成功');
-        navigate('/admin/articles');
+        navigate(getSafeLocalStorage(StorageKeyRedirectRouter, '/admin'));
       }
     } catch (error: any) {
       console.error(error.data.message);

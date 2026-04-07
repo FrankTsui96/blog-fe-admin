@@ -73,4 +73,7 @@ export const articlesApi = {
   /** 获取文章列表 */
   getArticles: (searchParams: IGetArticles) =>
     apiClient.get<OGetArticles>('articles', { searchParams }),
+  /** 管理员获取文章列表 */
+  getAdminArticles: (searchParams: IGetArticles) =>
+    apiClient.get<OGetArticles>('articles/admin', { searchParams }),
 };

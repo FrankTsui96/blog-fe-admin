@@ -23,6 +23,7 @@ const AdminLayout = lazy(() => import('@/layouts/admin/Layout'));
 const Console = lazy(() => import('@/pages/admin/Console'));
 const Login = lazy(() => import('@/pages/admin/Login'));
 const Articles = lazy(() => import('@/pages/admin/articles/Articles'));
+const EditArticles = lazy(() => import('@/pages/admin/articles/EditArticles'));
 
 /**
  * 路由数据
@@ -90,6 +91,10 @@ const routerData: RouteObject[] = [
       {
         path: 'articles',
         element: <Articles />,
+      },
+      {
+        path: 'articles/edit',
+        element: <EditArticles />,
       },
     ],
   },

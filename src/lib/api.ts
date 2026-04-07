@@ -1,6 +1,7 @@
 import ky, { type KyInstance, type Options } from 'ky';
-import { router } from '@/router';
 import { toast } from 'sonner';
+import { StorageKeyRedirectRouter } from '@/constants';
+import { router } from '@/router';
 
 // API 基础配置
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
@@ -61,6 +62,8 @@ const api: KyInstance = ky.create({
                   toast.error('登录过期，请重新登录');
                   // 未授权，清除 token 并跳转到登录页
                   localStorage.removeItem('token');
+                  // 设置 redirect router
+                  localStorage.setItem(StorageKeyRedirectRouter, router.state.location.pathname);
                   router.navigate('/admin/login', { replace: true });
                 } else {
                   toast.error('登录失败，请检查邮箱和密码');
