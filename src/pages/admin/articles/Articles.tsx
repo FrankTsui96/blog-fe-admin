@@ -26,7 +26,7 @@ export default function Articles() {
   const { data: articles } = useArticles({ page: 1, pageSize: 10 });
 
   const handleCreateArticle = async () => {
-    navigate('/admin/articles/edit');
+    navigate('/articles/edit');
   };
 
   return (

@@ -64,7 +64,7 @@ const api: KyInstance = ky.create({
                   localStorage.removeItem('token');
                   // 设置 redirect router
                   localStorage.setItem(StorageKeyRedirectRouter, router.state.location.pathname);
-                  router.navigate('/admin/login', { replace: true });
+                  router.navigate('/login', { replace: true });
                 } else {
                   toast.error('登录失败，请检查邮箱和密码');
                 }

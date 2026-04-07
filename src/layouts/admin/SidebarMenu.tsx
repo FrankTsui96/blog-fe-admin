@@ -16,12 +16,12 @@ const MenuItems = [
   {
     icon: <ChartPie />,
     name: '数据概览',
-    path: '/admin',
+    path: '/',
   },
   {
     icon: <FileText />,
     name: '文章管理',
-    path: '/admin/articles',
+    path: '/articles',
   },
 ];
 
@@ -30,7 +30,7 @@ export function SidebarMenu() {
     <Sidebar variant="inset" collapsible="icon">
       <SidebarHeader>
         <div className="flex justify-center items-center">
-          <Link to="/admin" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             {/* Logo 预留位置 */}
             <img src="/logo.svg" alt="logo" className="h-6 w-6" />
           </Link>

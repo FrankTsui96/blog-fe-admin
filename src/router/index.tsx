@@ -77,11 +77,11 @@ const routerData: RouteObject[] = [
    * 管理端路由
    */
   {
-    path: '/admin/login',
+    path: '/login',
     element: <Login />,
   },
   {
-    path: '/admin',
+    path: '/',
     element: <AdminLayout />,
     children: [
       {

@@ -40,7 +40,7 @@ export default function Login() {
       if (res.code === 200) {
         localStorage.setItem('token', res.data.accessToken);
         toast.success('登录成功');
-        navigate(getSafeLocalStorage(StorageKeyRedirectRouter, '/admin'));
+        navigate(getSafeLocalStorage(StorageKeyRedirectRouter, '/'));
       }
     } catch (error: any) {
       console.error(error.data.message);
