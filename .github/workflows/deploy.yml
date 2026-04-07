@@ -20,8 +20,8 @@ jobs:
 
       - name: Build and Push Frontend
         run: |
-          docker build -t crpi-xga1c7tdwvfzydbb.cn-hangzhou.personal.cr.aliyuncs.com/franktsui96/blog-fe:latest .
-          docker push crpi-xga1c7tdwvfzydbb.cn-hangzhou.personal.cr.aliyuncs.com/franktsui96/blog-fe:latest
+          docker build -t crpi-xga1c7tdwvfzydbb.cn-hangzhou.personal.cr.aliyuncs.com/franktsui96/blog-fe-admin:latest .
+          docker push crpi-xga1c7tdwvfzydbb.cn-hangzhou.personal.cr.aliyuncs.com/franktsui96/blog-fe-admin:latest
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@master
