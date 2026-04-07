@@ -106,6 +106,6 @@ const routerData: RouteObject[] = [
  * 使用 React Router v7 的 createBrowserRouter
  * 支持 loader、action 等新特性
  */
-export const router = createBrowserRouter(getRouterData(routerData));
+export const router = createBrowserRouter(getRouterData(routerData), { basename: '/admin' });
 
 export default router;

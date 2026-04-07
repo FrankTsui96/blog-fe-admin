@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx stylelint:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(pnpm add:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest add card dropdown-menu)",
+      "Bash(npm run dev)",
+      "Bash(pnpm ls:*)",
+      "WebSearch"
+    ]
+  }
+}
